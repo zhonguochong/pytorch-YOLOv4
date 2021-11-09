@@ -9,3 +9,5 @@ Pillow==7.1.2
 skimage
 opencv_python
 pycocotools
+onnx
+onnxruntime
