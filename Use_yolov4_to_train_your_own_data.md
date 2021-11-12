@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-11-09 16:56:23
+ * @LastEditTime: 2021-11-09 18:41:12
+ * @LastEditors: your name
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: \pytorch-YOLOv4\Use_yolov4_to_train_your_own_data.md
+-->
 yolov4的发布引起了不少的关注，但由于darknet是大佬c语言写的，对代码的阅读有诸多不变，所以周末的时候写了个pytorch版的(蹭一波热度)。虽然pytorch——yolov4写好已经有一段时间了，但是由于种种原因一直没有进行验证(主要就是懒)，大家提出了诸多问题帮助修复很多bug，还有大佬一起增加新的功能，感谢大家的帮助。这些天呼声最高的就是如何如何使用自己的数据进行训练，昨天又是周末，就把这件拖了很久的事做了。并不像使用很多数据，于是自己制作了一个简单的数据集。
 
 # 1. 代码准备
@@ -40,7 +48,7 @@ Cfg.subdivisions = 1
 # 4. 开始训练
 
 ```
- python train.py -l 0.001 -g 4 -pretrained ./yolov4.conv.137.pth -classes 3 -dir /home/OCR/coins
+ python3 train.py -l 0.001 -g 2 -pretrained ./yolov4.conv.137.pth -classes 3 -dir ./coins
 
 -l 学习率
 -g gpu id
